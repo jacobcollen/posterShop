@@ -1,9 +1,117 @@
-* {
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&family=Roboto&display=swap');
+*, html {
     margin: 0;
     padding: 0;
-}
+    box-sizing: border-box;
+} 
 
 body {
-    background-color: #2222;
+    background-color: #222;
 }
 
+/* header styling  */
+
+body header {
+    background-color: #2ddf7e;
+    background-image: url("img/ninjahead.svg");
+    background-repeat: no-repeat;
+    /* background-position-x: center;
+    background-position-y: bottom; */
+    background-position: center bottom;
+    background-size: 25%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body header img {
+    position: absolute; 
+    top: 1rem;
+    left: 1rem;
+}
+
+h1 {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    font-size: 5rem;
+}
+
+/* body styling  */
+
+body main {
+    max-width: 1000px;
+    margin: 2rem auto;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 2rem;
+}
+
+body main article {
+    grid-column: auto / span 2;
+    color: white;
+}
+
+body main article.large {
+    grid-column: auto / span 3;
+    color: #222;
+    background-color: white;
+}
+
+body main article img {
+    width: 100%;
+}
+
+body main article h2 {
+    font-size: 2rem;
+    font-family: 'Fira Sans', sans-serif;
+    margin-bottom: 0.5rem;
+}
+
+body main article button {
+    appearance: none;
+    padding: .5rem; 1rem;
+    border: none;
+    border-radius: 0.3rem;
+    background-color: #E83F57;
+    color: white;
+    margin-top: 2rem;
+}
+
+body main article.large h2, body main article.large p {
+    margin: 1rem;
+
+}
+
+body main article.large button {
+    margin: 1rem;
+    padding: 1rem 1rem;
+
+}
+
+/* footer styling  */
+
+body footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+    color: white;
+}
+
+body footer section {
+    max-width: 1000px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+body footer section article h2 {
+    margin-bottom: 1rem;
+}
+
+body footer section article p {
+    line-height: 150%;
+}
